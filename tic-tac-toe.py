@@ -37,14 +37,14 @@ for plays in range(9):
         continue
 
     board[line][row] = player
+    
+    if winner(board, player):
+        show_board(board)
+        print(f"The Winner was: {player}")
+        break
 
     if player == "O":
         player = "X"
     else:
         player = "O"
-    
-    if winner(board, player):
-        print(f"The Winner was: {player}")
-        break
-
 
